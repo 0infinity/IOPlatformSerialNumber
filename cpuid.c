@@ -12,6 +12,13 @@ int main ()
     
     serialNumber = IORegistryEntryCreateCFProperty(service, CFSTR("IOPlatformSerialNumber"), kCFAllocatorDefault, 0);
     
-    CFShow(serialNumber);
+    /* 
+     * CFShow outputs to stderr, before the output, we first copy the CFStringRef to a char
+     * so we can use printf to output to stdout
+     */
+    const char* str = CFStringGetCStringPtr(serialNumber,kCFStringEncodingMacRoman);
+    printf("%s\n", str);
+
+    //CFShow(serialNumber);
     return 0;
 }
