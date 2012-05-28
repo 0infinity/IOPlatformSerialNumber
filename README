@@ -1,1 +1,7 @@
 Simple Wrapper to obtain IOPlatfromSerialNumber from apple IOKit written in C
+
+this program can simply be extended to allow for other entries in IOKit
+
+more information about available IOKit entries visit:
+
+http://developer.apple.com/library/mac/#documentation/devicedrivers/conceptual/IOKitFundamentals/Families_Ref/Families_Ref.html#//apple_ref/doc/uid/TP0000021-BABCCBIJ
