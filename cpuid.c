@@ -1,7 +1,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <IOKit/IOKitLib.h>
 
-int main (int argc, const char * argv[])
+int main ()
 {
     CFMutableDictionaryRef matching;
     matching = IOServiceMatching("IOPlatformExpertDevice");
@@ -12,6 +12,6 @@ int main (int argc, const char * argv[])
     
     serialNumber = IORegistryEntryCreateCFProperty(service, CFSTR("IOPlatformSerialNumber"), kCFAllocatorDefault, 0);
     
-    CFShow(newText);
+    CFShow(serialNumber);
     return 0;
 }
